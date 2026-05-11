@@ -39,9 +39,10 @@ We will be creating two triggers, called 'deploy-api' and 'deploy-frontend'
 2. Set the name
 3. Configure the repository and branch regex (make sure Repository generation is 1st gen)
 4. Set cloudbuild configuration file location to match the cloudbuild files in this repository
-5. Make sure to enable 'Require approval before build executes'
-6. Optionally check 'Send build logs to Github'
-7. Click 'Save'
+5. In case of 'deploy-api', Under 'Advanced -> Substitution variables' make sure to add `_PROJECT_NUMBER`: `699424466777`
+6. Make sure to enable 'Require approval before build executes'
+7. Optionally check 'Send build logs to Github'
+8. Click 'Save'
 
 ### Creating a BigQuery table
 1. Go to BigQuery
