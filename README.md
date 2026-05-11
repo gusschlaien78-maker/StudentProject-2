@@ -39,7 +39,7 @@ We will be creating two triggers, called 'deploy-api' and 'deploy-frontend'
 2. Set the name
 3. Configure the repository and branch regex (make sure Repository generation is 1st gen)
 4. Set cloudbuild configuration file location to match the cloudbuild files in this repository
-5. In case of 'deploy-api', Under 'Advanced -> Substitution variables' make sure to add `_PROJECT_NUMBER`: `699424466777`
+5. In case of 'deploy-api', Under 'Advanced -> Substitution variables' make sure to add `_PROJECT_NUMBER` (You can find the project number on the project main page - by clicking the 'Google Cloud' icon in the top left)
 6. Make sure to enable 'Require approval before build executes'
 7. Optionally check 'Send build logs to Github'
 8. Click 'Save'
@@ -70,3 +70,9 @@ VALUES
   ('9961ec13-867b-4c2b-8911-0ab519f77c71', 'John Casidy',   DATETIME '2000-01-07 00:00:00', 'USA'),
   ('3a8d6254-7e8c-47bf-8692-eb47e0c1314d', 'Ulrich Haltmann', DATETIME '1997-09-20 00:00:00', 'Germany');
 ```
+
+## Deploy
+ - Now that all the resources have been created, go to 'Cloud Build' and execute 'deploy-frontend' and 'deploy-api'
+- After the triggers finish building, go to 'Cloud Run' and find the frontend resource
+- There, go to 'Networking' tab and click on the link containing the project number
+- If everything worked correctly, you should see a webpage appear and after a few seconds the dummy data we setup should load
