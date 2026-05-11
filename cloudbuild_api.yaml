@@ -23,8 +23,9 @@ steps:
         '--region',
         'europe-west3',
         '--platform',
-        '--set-env-vars=PROJECT_NUMBER=${_PROJECT_ID}',
         'managed',
+        '--set-env-vars',
+        'PROJECT_NUMBER=${_PROJECT_NUMBER}',
         '--allow-unauthenticated'
       ]
 
