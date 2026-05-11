@@ -1,13 +1,15 @@
+import os
 from fastapi import FastAPI
 from google.cloud import bigquery
 from fastapi.middleware.cors import CORSMiddleware
+
+PROJECT_NUMBER = os.environ.get('PROJECT_NUMBER', '')
 
 app = FastAPI()
 
 origins = [
     "http://localhost:5173",
-    "https://frontend-699424466777.europe-west3.run.app",
-    "https://frontend-bttvfxlysa-ey.a.run.app"
+    f"https://frontend-{PROJECT_NUMBER}.europe-west3.run.app"
 ]
 
 app.add_middleware(
