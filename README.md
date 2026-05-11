@@ -60,3 +60,12 @@ We will be creating two triggers, called 'deploy-api' and 'deploy-frontend'
 | Country   | STRING  | NULLABLE |
 
 8. Click on 'Create table'
+9. Run the following SQL (Click on the + in the control panel and paste the query there):
+```
+INSERT INTO `my_test_dataset.my_test_table` (ID, Name, BirthDate, Country)
+VALUES
+  ('a05dbe3b-5d51-42bb-bfec-900e2d6d8e25', 'Ramon Ortega',   DATETIME '1987-02-11 00:00:00', 'Mexico'),
+  ('eeffc695-e5f0-4171-ac5e-c58f71bc666e', 'Jan Moldavsek', DATETIME '1974-05-13 00:00:00', 'Czechia'),
+  ('9961ec13-867b-4c2b-8911-0ab519f77c71', 'John Casidy',   DATETIME '2000-01-07 00:00:00', 'USA'),
+  ('3a8d6254-7e8c-47bf-8692-eb47e0c1314d', 'Ulrich Haltmann', DATETIME '1997-09-20 00:00:00', 'Germany');
+```
